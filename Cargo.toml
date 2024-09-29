@@ -1,0 +1,20 @@
+[package]
+name = "rtic-fcfs"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+harness = false
+
+[profile.release]
+opt-level = 'z'
+lto = true
+
+[dependencies]
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+defmt = "0.3.8"
+rtic = { version = "2.1.1", features = [ "thumbv7-backend" ] }
+rtic-monotonics = "2.0.2"
+stm32f3xx-hal = { version = "0.10.0", features = [ "stm32f303x8" ] }
+panic-probe = { version = "0.3.2", features = ["print-defmt"] }
+defmt-rtt = "0.4.1"
