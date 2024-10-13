@@ -2,8 +2,6 @@
 #![no_std]
 #![feature(type_alias_impl_trait)]
 
-use defmt_rtt as _;
-use panic_probe as _;
 use rtic_fcfs as _;
 
 #[rtic::app(

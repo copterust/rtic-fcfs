@@ -2,7 +2,7 @@
 #![no_std]
 
 use core::sync::atomic::{AtomicUsize, Ordering};
-use defmt_rtt as _;
+use defmt_brtt as _;
 use panic_probe as _;
 use stm32f3xx_hal as _;
 
